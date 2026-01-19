@@ -1,36 +1,87 @@
 @charset "UTF-8";
 
+/* 
+  Variável para cores:
+  --fundo-principal
+  --texto
+  --texto-inverso
+  --destaque
+  --destaque-inverso
+  --fundo-card
+*/
+
+:root {
+  --fundo-body:  #faedde;
+  --texto: #222222;
+  --texto-inverso: #5592ED;
+  --destaque: #988969;
+  --fundo-menu-superior: #6A55ED;
+  --fundo-card: #EDBB55
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #faedde;
+}
+
+body.escuro {
+    
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    background-color: aqua;
-    padding: 8px;
-    
+    background-color: var(--fundo-menu-superior);
+    padding: 25px;
     box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.164);
     top: 0;
-    z-index: 1; 
-    
+    position: sticky;
+    z-index: 1;
+
 }
 
-.menu {
+#menu {
     display: flex;
-    flex-basis: 500px;
-    background-color: orangered;
-    border-radius: 5px;
-    border: 1px solid black;    
+    flex-basis: 100vw;
+
+    
 }
 
-main {
-    
-    
+nav#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
 
+}
+
+nav#menu a {
+    text-decoration: none;
+    font-weight: 615;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background-color 0.4s, color 0.4s;
+
+}
+
+nav#menu a:hover {
+    background-color: var(--fundo-body);
+    color: var(--texto);
+}
+
+
+#edit {
+   font-size: 20px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#edit a:hover {
+    background-color: white;
+    color: gray;
 }
 
 .calculadora {
@@ -41,18 +92,26 @@ main {
     border-radius: 10px;
     width: 44vw;
     height: 99vh;
-    margin: 50px auto; 
+    margin: 50px auto;
+}
+
+.fa-calculator {
+    font-size: 25px;
+}
+
+.fa-moon {
+    font-size: 25px;
 }
 
 .visor {
     grid-area: 1 / 1 / 2 / 7;
-    background-color: rgb(83, 43, 226);
+    background-color: --;
     border-radius: 10px;
 }
 
 .numero-9 {
-   grid-area: 2 / 5 / 2 / 6;
-   border-radius: 10px;
+    grid-area: 2 / 5 / 2 / 6;
+    border-radius: 10px;
 }
 
 .numero-8 {
@@ -121,8 +180,8 @@ main {
 }
 
 .divisao {
-   grid-area: 2 / 6 / 2 / 7;
-   border-radius: 10px;
+    grid-area: 2 / 6 / 2 / 7;
+    border-radius: 10px;
 }
 
 .AC {
@@ -150,7 +209,15 @@ main {
     border-radius: 10px;
 }
 
+
 .barra-lateral {
     grid-area: 2 / 1 / 6 / 2;
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: var(--texto-inverso);
 }
+
+#rodape {
+    padding-bottom: 20px;
+    background-color: var(--fundo-menu-superior);
+    
+}
+
