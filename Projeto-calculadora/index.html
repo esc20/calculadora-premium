@@ -12,42 +12,45 @@
         <nav id="menu">
             <ul>
                 <li><a href="#calculadora" class="link"><i class="fa-solid fa-calculator"></i></a></li>
-                <li><a href="#" class="link"><i class="fa-solid fa-moon"></i></a></li>
-                
+                <li><a href="#" id="botao-tema"><i class="fa-solid fa-moon">
+                </i></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="calculadora">
             <!--/// VISOR ///-->
-         <textarea class="visor"></textarea>   
+         <input type="text" id="display" readonly placeholder="0">
             <!--/// NUMEROS ///-->
-        <button id = "edit" class="numero-9">9</button>
-        <button id = "edit" class="numero-8">8</button>
-        <button id = "edit" class="numero-7">7</button>
-        <button id = "edit" class="numero-6">6</button>
-        <button id = "edit" class="numero-5">5</button>
-        <button id = "edit" class="numero-4">4</button>
-        <button id = "edit" class="numero-3">3</button> 
-        <button id = "edit" class="numero-2">2</button>
-        <button id = "edit" class="numero-1">1</button>
-        <button id = "edit" class="numero-0">0</button>
+        <div class="teclado">    
+        <button id= "edit" class="numero-9">9</button>
+        <button id= "edit" class="numero-8">8</button>
+        <button id= "edit" class="numero-7">7</button>
+        <button id= "edit" class="numero-6">6</button>
+        <button id= "edit" class="numero-5">5</button>
+        <button id= "edit" class="numero-4">4</button>
+        <button id= "edit" class="numero-3">3</button> 
+        <button id= "edit" class="numero-2">2</button>
+        <button id= "edit" class="numero-1">1</button>
+        <button id= "edit" class="numero-0">0</button>
            <!--/// FIM DOS NUMEROS ///-->
            <!--/// SINAIS NUMERICOS ///-->
-        <button id = "edit" class="virgula">,</button>
-        <button id = "edit" class="adicao">+</button>
-        <button id = "edit" class="subtracao">-</button>
-        <button id = "edit" class="multiplicacao">X</button>
-        <button id = "edit" class="divisao">/</button>  
-        <button id = "edit" class="AC">AC</button>
-        <button id = "edit" class="parenteses-esquerdo">(</button>
-        <button id = "edit" class="parenteses-direito">)</button>
-        <button id = "edit" class="porcento">%</button> 
-        <button id = "edit" class="igual">=</button>
+        <button id= "edit" class="virgula">,</button>
+        <button id= "edit" class="adicao">+</button>
+        <button id= "edit" class="subtracao">-</button>
+        <button id= "edit" class="multiplicacao">X</button>
+        <button id= "edit" class="divisao">/</button>  
+        <button id= "edit" class="AC">AC</button>
+        <button id= "edit" class="parenteses-esquerdo">(</button>
+        <button id= "edit" class="parenteses-direito">)</button>
+        <button id= "edit" class="porcento">%</button> 
+        <button id= "edit" class="igual">=</button>
         <div class="barra-lateral"></div>
+        </div>
         <!--FIM DOS SINAIS NUMERICOS-->
         </section>
     </main>
+    <script src="scripts/script.js"></script>
     <footer id="rodape">
         
     </footer>

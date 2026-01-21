@@ -11,22 +11,29 @@
 */
 
 :root {
-  --fundo-body:  #faedde;
+  --fundo-body:  #f3f2f1;
   --texto: #222222;
   --texto-inverso: #5592ED;
-  --destaque: #988969;
+  --destaque: #bebfff;
   --fundo-menu-superior: #6A55ED;
-  --fundo-card: #EDBB55
+  --fundo-card: #d6f0f7;
+  --fundo-calculadora: black;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #faedde;
+    background-color: var(--fundo-body);
 }
 
 body.escuro {
-    
+  --fundo-body:  rgb(63, 63, 63);
+  --texto: white;
+  --texto-inverso: rgb(31, 30, 30);
+  --destaque: rgb(230, 229, 229) ;
+  --fundo-menu-superior: black;
+  --fundo-card: rgb(185, 182, 182);
+  --fundo-calculadora: black;
 }
 
 header {
@@ -44,9 +51,7 @@ header {
 
 #menu {
     display: flex;
-    flex-basis: 100vw;
-
-    
+    flex-basis: 100vw;    
 }
 
 nav#menu ul {
@@ -73,27 +78,20 @@ nav#menu a:hover {
     color: var(--texto);
 }
 
-
-#edit {
+button#edit {
    font-size: 20px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: var(--fundo-card);
+   transition: background-color 0.3s, color 0.3s;
 }
 
-#edit a:hover {
-    background-color: white;
-    color: gray;
+button#edit:hover {
+    background-color: var(--fundo-body);
+    color: rgba(102, 102, 102, 0.322);
+    cursor: pointer;
 }
 
-.calculadora {
-    display: grid;
-    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.2fr;
-    border: solid 1px black;
-    border-radius: 10px;
-    width: 44vw;
-    height: 99vh;
-    margin: 50px auto;
-}
+
 
 .fa-calculator {
     font-size: 25px;
@@ -103,11 +101,53 @@ nav#menu a:hover {
     font-size: 25px;
 }
 
-.visor {
-    grid-area: 1 / 1 / 2 / 7;
-    background-color: --;
-    border-radius: 10px;
+.fa-sun {
+    font-size: 25px;
 }
+
+.calculadora {
+    display: grid;
+    /* Define 6 colunas de tamanhos iguais */
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 10px; /* Espaço entre os botões */
+    padding-left: 30%;
+    background-color: var(--fundo-card);
+    border-radius: 15px;
+    
+}
+
+#display {
+    grid-area: 1 / 1 / 2 / 7;
+    background-color: var(--destaque);
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 15px;
+    margin-top: 50px;
+    width: 574px;
+    height: 110px;
+    position: absolute;
+    border: none;
+    text-align: right;
+    color: black;
+    outline: none;
+    font-size: 50px;
+}
+
+.teclado {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.2fr;
+    border: solid 2.5px black;
+    background-color: var(--fundo-calculadora);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.164);
+    border-radius: 10px;
+    color: white;
+    width: 44vw;
+    height: 99vh;
+    margin: 50px auto;
+}
+
 
 .numero-9 {
     grid-area: 2 / 5 / 2 / 6;
@@ -213,6 +253,7 @@ nav#menu a:hover {
 .barra-lateral {
     grid-area: 2 / 1 / 6 / 2;
     background-color: var(--texto-inverso);
+    border-radius: 8px;
 }
 
 #rodape {
