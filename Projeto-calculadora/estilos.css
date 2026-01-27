@@ -2,7 +2,7 @@
 
 /* 
   Variável para cores:
-  --fundo-principal
+  --fundo-body
   --texto
   --texto-inverso
   --destaque
@@ -11,13 +11,14 @@
 */
 
 :root {
-  --fundo-body:  #f3f2f1;
-  --texto: #222222;
-  --texto-inverso: #5592ED;
-  --destaque: #bebfff;
-  --fundo-menu-superior: #6A55ED;
-  --fundo-card: #d6f0f7;
-  --fundo-calculadora: black;
+    --fundo-body: #f3f2f1;
+    --texto: #222222;
+    --texto-display: rgb(202, 201, 201);
+    --texto-teclas: rgb(226, 226, 226);
+    --display: #1e272e;
+    --fundo-menu-superior: #c3fdd4;
+    --teclas: rgb(226, 226, 226);
+    
 }
 
 body {
@@ -27,30 +28,29 @@ body {
 }
 
 body.escuro {
-  --fundo-body:  rgb(63, 63, 63);
-  --texto: white;
-  --texto-inverso: rgb(31, 30, 30);
-  --destaque: rgb(230, 229, 229) ;
-  --fundo-menu-superior: black;
-  --fundo-card: rgb(185, 182, 182);
-  --fundo-calculadora: rgb(63, 63, 63);
+    --fundo-body: rgb(63, 63, 63);
+    --texto: white;
+    --texto-inverso: rgb(31, 30, 30);
+    --destaque: rgb(230, 229, 229);
+    --fundo-menu-superior: black;
+    --fundo-card: rgb(185, 182, 182);
+    --fundo-calculadora: rgb(63, 63, 63);
 }
 
 header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--fundo-menu-superior);
+    background-color: (--fundo-menu-superior);
     padding: 25px;
     box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.164);
     top: 0;
     
-
 }
 
 #menu {
     display: flex;
-    flex-basis: 100vw;    
+    flex-basis: 100vw;
 }
 
 nav#menu ul {
@@ -60,7 +60,6 @@ nav#menu ul {
     margin: 0;
     justify-content: space-between;
     width: 100%;
-
 }
 
 nav#menu a {
@@ -69,7 +68,6 @@ nav#menu a {
     padding: 12px 15px;
     border-radius: 5px;
     transition: background-color 0.4s, color 0.4s;
-
 }
 
 nav#menu a:hover {
@@ -79,10 +77,10 @@ nav#menu a:hover {
 
 
 button.edit {
-   font-size: 20px;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   background-color: var(--fundo-card);
-   transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--teclas);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 
@@ -106,20 +104,21 @@ button.edit:hover {
 
 .calculadora {
     display: grid;
-    grid-template-rows:  repeat(5, 100px);
-    grid-template-columns:  repeat(6, 100px);
+    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(6, 100px);
     gap: 5px;
     width: 90%;
     padding-left: 20px;
-    margin-top: 13px;    
+    margin-top: 13px;
 }
 
 #display {
     width: 78%;
-    background-color: var(--destaque);
-    border-radius: 10px 10px ;
+    background-color: var(--display);
+    border-radius: 10px 10px;
     padding: 30px 20px;
     font-size: 50px;
+    color: var(--texto-display);
     text-align: right;
     box-sizing: border-box;
     margin: 0;
@@ -130,16 +129,9 @@ button.edit:hover {
 .teclado {
     display: grid;
     grid-template-rows: repeat(5, 80px);
-    grid-template-columns:  repeat(4, 80px);
+    grid-template-columns: repeat(4, 80px);
     width: 90vw;
     column-gap: 5px;
-    
-}
-
-.edit {
-    width: 100%;
-    height: 70px;
-    
 }
 
 .numero-9 {
@@ -250,23 +242,70 @@ button.edit:hover {
 }
 
 #rodape {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     background-color: var(--fundo-menu-superior);
-    
+
 }
 
 @media screen and (min-width: 768px) {
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo-body);
+    overflow-x: hidden;
+}
+    header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: var(--fundo-menu-superior);
+        padding: 25px;
+        box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.164);
+        top: 0;
+        z-index: 1;
+        position: sticky;
+    }
+
     .calculadora {
-        width: 100px;
-        padding: 20px;
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(6, 100px);
+        gap: 5px;
+        width: 90%;
+        padding-left: 380px;
+        margin-top: 13px;
     }
-    
-    .teclado {
-        grid-template-columns: repeat(5, 60px);
+
+    #display {
         width: 100%;
-        column-gap: 10px;
-        row-gap: 5px;
+        background-color: var(--display);
+        border-radius: 10px 10px;
+        padding: 30px 20px;
+        font-size: 50px;
+        text-align: right;
+        box-sizing: border-box;
+        border: none;
+        grid-area: 1 / 1 / 2 / 7;
     }
+
+    .teclado {
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(6, 100px);
+        width: 80px;
+    }
+
+    .edit {
+        width: 100%;
+        height: 80px;
+
+    }
+
+    #rodape {
+    margin-top: 90px;    
+    padding-bottom: 40px;
+    background-color: var(--fundo-menu-superior);
 
 }
 
+}
