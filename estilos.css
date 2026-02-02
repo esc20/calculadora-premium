@@ -55,7 +55,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     background-color: var(--fundo-menu-superior);
-    padding: 25px;
+    padding: 15px;
     box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.164);
     top: 0;
 }
@@ -129,10 +129,11 @@ button.edit:hover {
 }
 
 #display {
-    width: 100%;
+    width: 90vw;
     background-color: var(--display);
     border-radius: 10px 10px;
     padding: 30px 20px;
+    margin-top: 5px;
     font-size: 50px;
     color: var(--texto-display);
     text-align: right;
@@ -140,16 +141,17 @@ button.edit:hover {
     margin: 0;
     border: none;
     grid-area: 1 / 1 / 2 / 7;
+    margin-bottom: 5px;
 }
 
 #teclado {
     display: grid;
-    grid-template-rows: repeat(5, 80px);
-    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(5, 20%);
+    grid-template-columns: repeat(6, 20%);
     grid-area: 2 / 1 / 7 / 7;
-    width: 90vw;
+    width: 70vw;
     column-gap: 6px;
-    row-gap: 6px;
+    row-gap: 8px;
     border: none !important; 
     outline: none !important;
     box-shadow: none !important;
@@ -286,7 +288,7 @@ button.edit:hover {
 #rodape {
     padding-bottom: 30px;
     background-color: var(--fundo-menu-superior);
-    margin-top: 10px;
+    margin-top: 60px;
 }
 
 @media screen and (min-width: 768px) {
