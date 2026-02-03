@@ -110,11 +110,6 @@ button.edit {
     }
 
 }
-button.edit:hover {
-    background-color: var(--fundo-body);
-    color: rgba(102, 102, 102, 0.322);
-    cursor: pointer;
-}
 
 
 .fa-moon {
