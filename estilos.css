@@ -99,7 +99,8 @@ button.edit {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: var(--teclas);
     color: var(--texto-teclas);
-    transition: background-color 0.3s, color 0.3s, transform 0.1s ease-out;
+    border-top: 1px solid transparent;
+    transition: 0.1s ease-out;
 }
 
 
