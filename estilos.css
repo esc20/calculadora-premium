@@ -103,7 +103,13 @@ button.edit {
     transition: 0.1s ease-out;
 }
 
+@media (hover: hover) {
+    .escuro .edit:active {
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); 
+        transform: translateY(2px); 
+    }
 
+}
 button.edit:hover {
     background-color: var(--fundo-body);
     color: rgba(102, 102, 102, 0.322);
