@@ -227,5 +227,10 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
+botoes.forEach(botao => {
+    botao.addEventListener('touchend', () => {
+        botao.blur(); 
+    });
+});
 
 
