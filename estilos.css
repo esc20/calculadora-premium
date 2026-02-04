@@ -126,38 +126,31 @@ button.edit {
 
 .calculadora {
     display: grid;
-    grid-template-rows: repeat(6, auto);
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 2vh;
-    column-gap: 2vw;
-    width: 90vw;
-    padding-left: 20px;
-    margin: 10px auto;
-    padding-left: 0;
+    gap: 10px;
+    width: 95vw;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
 }
 
 #display {
     width: 100%;
     background-color: var(--display);
-    grid-column: 1 / 1;
-    border-radius: 10px 10px;
-    box-sizing: 5px;
+    border-radius: 10px;
     padding: 20px 15px;
-    margin-top: 5px;
-    font-size: 50px;
+    font-size: 45px;
     color: var(--texto-display);
     text-align: right;
     box-sizing: border-box;
-    margin: 0;
     border: none;
     grid-column: 1 / 5;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #teclado {
-    display: contents;
-    display: contents;
-    width: 70vw;
+    display:contents;
+    width: 100%;
     border: none !important; 
     outline: none !important;
     box-shadow: none !important;
@@ -184,75 +177,9 @@ button.edit {
   background-color: var(--tecla-Igual);
 }
 
-.numero-9 {
-    grid-area: 3 / 3;
-    border-radius: 10px;
-}
-
-.numero-8 {
-    grid-area: 3 / 2;
-    border-radius: 10px;
-}
-
-.numero-7 {
-    grid-area: 3 / 1;
-    border-radius: 10px;
-}
-
-.numero-6 {
-    grid-area: 4 / 3;
-    border-radius: 10px;
-}
-
-.numero-5 {
-    grid-area: 4 / 2;
-    border-radius: 10px;
-}
-
-.numero-4 {
-    grid-area: 4 / 1;
-    border-radius: 10px;
-}
-.numero-3 {
-    grid-area: 5 / 3;
-    border-radius: 10px;
-}
-.numero-2 {
-    grid-area: 5 / 2;
-    border-radius: 10px;
-}
-.numero-1 {
-    grid-area: 5 / 1;
-    border-radius: 10px;
-}
-
-.numero-0 {
-    grid-area: 6 / 2 / 6 / 4;
-    border-radius: 10px;
-}
-
-.virgula {
-    grid-area: 6 / 4;
-    border-radius: 10px;
-}
-
-.adicao {
-    grid-area: 4 / 4;
-    border-radius: 10px;
-}
-
-.subtracao {
-    grid-area: 3 / 4;
-    border-radius: 10px;
-}
-
-.multiplicacao {
-    grid-area: 2 / 4;
-    border-radius: 10px;
-}
-
-.divisao {
-    grid-area: 2 / 4;
+.backspace {
+    grid-area: 2 / 1;
+    font-size: 25px;
     border-radius: 10px;
 }
 
@@ -262,31 +189,96 @@ button.edit {
 
 }
 
-.parenteses-esquerdo {
-    grid-area: 6 / 1;
-    border-radius: 10px;
-}
-
-.parenteses-direito {
-    grid-area: 5 / 4;
-    border-radius: 10px;
-}
-
 .porcento {
     grid-area: 2 / 3;
     border-radius: 10px;
 }
 
-.igual {
-    grid-area: 7 / 1 / 7 / 5  ;
+.divisao {
+    grid-area: 2 / 4;
     border-radius: 10px;
 }
 
-.backspace {
-    grid-area: 2/ 1;
-    font-size: 25px;
+.numero-7 {
+    grid-area: 3 / 1;
     border-radius: 10px;
 }
+
+.numero-8 {
+    grid-area: 3 / 2;
+    border-radius: 10px;
+}
+
+.numero-9 {
+    grid-area: 3 / 3;
+    border-radius: 10px;
+}
+
+.multiplicacao {
+    grid-area: 3 / 4;
+    border-radius: 10px;
+}
+
+.numero-4 {
+    grid-area: 4 / 1;
+    border-radius: 10px;
+}
+
+.numero-5 {
+    grid-area: 4 / 2;
+    border-radius: 10px;
+}
+
+.numero-6 {
+    grid-area: 4 / 3;
+    border-radius: 10px;
+}
+
+.subtracao {
+    grid-area: 4 / 4;
+    border-radius: 10px;
+}
+
+.numero-1 {
+    grid-area: 5 / 1;
+    border-radius: 10px;
+}
+
+.numero-2 {
+    grid-area: 5 / 2;
+    border-radius: 10px;
+}
+
+.numero-3 {
+    grid-area: 5 / 3;
+    border-radius: 10px;
+}
+
+.adicao {
+    grid-area: 5 / 4;
+    border-radius: 10px;
+}
+
+.parenteses {
+    grid-area: 6 / 1;
+    border-radius: 10px;
+}
+
+.numero-0 {
+    grid-area: 6 / 2;
+    border-radius: 10px;
+}
+
+.virgula {
+    grid-area: 6 / 3;
+    border-radius: 10px;
+}
+
+.igual {
+    grid-area: 6 / 4;
+    border-radius: 10px;
+}
+
 
 #rodape {
     padding-bottom: 30px;
@@ -302,64 +294,39 @@ button.edit {
     overflow-x: hidden;
 }
     header {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: var(--fundo-menu-superior);
-        padding: 25px;
-        box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.164);
-        top: 0;
-        z-index: 1;
+        padding: 20px;
         position: sticky;
+        top: 0;
+        z-index: 10;
     }
 
     .calculadora {
-        display: grid;
-        grid-template-rows: repeat(5, 100px);
-        grid-template-columns: repeat(6, 100px);
-        gap: 5px;
-        width: 90%;
-        padding-left: 380px;
-        margin-top: 13px;
+        display: block; /* Mudamos para flex para centralizar o bloco todo */
+        width: 550px; /* Largura fixa para não esticar na tela toda */
+        max-width: none;
+        margin: 50px auto;
+        padding: 25px;
+        border-radius: 20px;
     }
 
     #display {
-        width: 100%;
-        background-color: var(--display);
-        border-radius: 10px 10px;
-        padding: 30px 20px;
-        font-size: 50px;
-        text-align: right;
-        margin-bottom: 5px;
-        box-sizing: border-box;
-        border: none;
-        grid-area: 1 / 1 / 2 / 7;
+        font-size: 60px;
+        margin-bottom: 20px;
+        
     }
 
     #teclado {
-    display: grid;
-    grid-template-rows: repeat(5, 90px);
-    grid-template-columns: repeat(6, 99px);
-    grid-area: 2 / 1 / 7 / 7;
-    width: 86vw;
-    column-gap: 6px;
-    row-gap: 6px;
-    border: none !important; 
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-    .edit {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Mantive 4 colunas para não quebrar seus grid-areas */
+        gap: 12px;
         width: 100%;
-        height: 80px;
     }
 
-    #rodape {
-    padding-bottom: 30px;
-    background-color: var(--fundo-menu-superior);
-    margin-top: 10px;
+    .edit {
+        height: 80px;
+    }
 }
+    
 
-}
     
 

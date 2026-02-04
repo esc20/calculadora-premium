@@ -34,7 +34,9 @@ botoes.forEach(botao => {
             botao.classList.contains('adicao') ||
             botao.classList.contains('subtracao') ||
             botao.classList.contains('multiplicacao') ||
-            botao.classList.contains('divisao');
+            botao.classList.contains('divisao') ||
+            botao.classList.contains('porcento') ||
+            botao.classList.contains('parenteses');
 
         if (!isFuncaoEspecial) {
             display.value += botao.innerText;
@@ -227,5 +229,19 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
+function adicionarParenteses() {
+    const valorAtual = display.value;
 
+    const abertos = (valorAtual.match(/\(/g) || []).length;
+    const fechados = (valorAtual.match(/\)/g) || []).length;
+
+    const ultimoChar = valorAtual.slice(-1);
+    const operadores = ['+', '-', 'x', '\u00F7', '(', ''];
+
+    if (abertos > fechados && !operadores.includes(ultimoChar)) {
+        display.value += ')';
+    } else {
+        display.value += '(';
+    }
+}
 
